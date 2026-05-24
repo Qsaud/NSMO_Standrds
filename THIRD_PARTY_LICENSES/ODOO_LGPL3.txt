@@ -1,0 +1,2 @@
+UNAVAILABLE: Could not fetch official Odoo LICENSE due blocked GitHub network access in this environment (HTTP 403).
+Intended source: https://github.com/odoo/odoo/blob/18.0/LICENSE

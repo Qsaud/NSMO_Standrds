@@ -40,6 +40,7 @@
             <field name="inherit_id" ref="project.view_project_project_filter"/>
             <field name="arch" type="xml">
                 <xpath expr="//search" position="inside">
+                    <!-- Keep this xpath broad (//search) for Odoo-version compatibility. -->
                     <separator/>
                     <filter name="root_projects" string="Root Projects" domain="[('parent_id', '=', False)]"/>
                     <filter name="subprojects" string="Subprojects" domain="[('parent_id', '!=', False)]"/>

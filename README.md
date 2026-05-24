@@ -1,4 +1,4 @@
-# Odoo 18 Project Reference and Customization Layout
+# NSMO Standards Odoo 18 Project Reference and Customization Layout
 
 - `vendor/odoo18/addons/project` is intended to hold the untouched original Odoo 18 Community `project` module as a reference copy.
 - `custom_addons/qsteps_project_custom` is the dedicated addon for all future development and customizations.

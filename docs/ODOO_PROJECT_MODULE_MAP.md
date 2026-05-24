@@ -3,7 +3,7 @@
 ## 1. Purpose of This Document
 This document maps:
 - the **reference location** for the Odoo 18 Community `project` module under `vendor/odoo18/addons/project`, and
-- our **customization module** under `custom_addons/qsteps_project_custom`.
+- our **customization module** under `custom_addons/qsteps_accreditation_project`.
 
 Its purpose is to help developers implement changes safely in the custom addon without editing vendor/reference files directly.
 
@@ -19,7 +19,7 @@ Its purpose is to help developers implement changes safely in the custom addon w
 │           └── project/
 │               └── .placeholder
 ├── custom_addons/
-│   └── qsteps_project_custom/
+│   └── qsteps_accreditation_project/
 │       ├── __init__.py
 │       ├── __manifest__.py
 │       ├── models/
@@ -56,7 +56,7 @@ Because vendor source files are unavailable in this repo snapshot, only custom a
 
 | File path | Model name | Purpose | Important fields/methods |
 |---|---|---|---|
-| `custom_addons/qsteps_project_custom/models/project_task.py` | `project.task` (inherited) | Declares extension hook for future task customizations. | `_inherit = "project.task"`; no custom fields/methods yet. |
+| `custom_addons/qsteps_accreditation_project/models/project_task.py` | `project.task` (inherited) | Declares extension hook for future task customizations. | `_inherit = "project.task"`; no custom fields/methods yet. |
 
 > Vendor model table is pending population once `vendor/odoo18/addons/project` is added.
 
@@ -64,14 +64,14 @@ Because vendor source files are unavailable in this repo snapshot, only custom a
 
 | File path | View type | Model affected | Purpose |
 |---|---|---|---|
-| `custom_addons/qsteps_project_custom/views/project_task_views.xml` | Odoo XML data container (currently empty) | None yet | Placeholder for future inherited `project.task` view extensions. |
+| `custom_addons/qsteps_accreditation_project/views/project_task_views.xml` | Odoo XML data container (currently empty) | None yet | Placeholder for future inherited `project.task` view extensions. |
 
 > Vendor view mapping is pending because vendor XML files are not present.
 
 ## 6. Portal Components
 
 - No portal-related files are currently present under `vendor/odoo18/addons/project` in this repository snapshot.
-- No portal controllers/templates are currently present in `custom_addons/qsteps_project_custom`.
+- No portal controllers/templates are currently present in `custom_addons/qsteps_accreditation_project`.
 
 ### How portal task/project views are typically handled (target architecture)
 Once vendor code is available, portal behavior is usually split between:
@@ -82,7 +82,7 @@ Once vendor code is available, portal behavior is usually split between:
 ## 7. Reports
 
 - No report files are currently present under vendor `project` in this repository snapshot.
-- No report files are currently present in `custom_addons/qsteps_project_custom`.
+- No report files are currently present in `custom_addons/qsteps_accreditation_project`.
 
 Planned extension pattern:
 - add `report/*.xml` in custom addon for report action/template inheritance or new task/project reports.
@@ -129,8 +129,8 @@ Implication:
 ## 10. Safe Customization Strategy
 
 1. **Never edit** `vendor/odoo18/addons/project` directly.
-2. Extend behavior by `_inherit` in `custom_addons/qsteps_project_custom/models/*.py`.
-3. Extend UI via inherited XML views in `custom_addons/qsteps_project_custom/views/*.xml`.
+2. Extend behavior by `_inherit` in `custom_addons/qsteps_accreditation_project/models/*.py`.
+3. Extend UI via inherited XML views in `custom_addons/qsteps_accreditation_project/views/*.xml`.
 4. Add fields on inherited models in custom addon only.
 5. Add groups/rules/ACLs in custom addon `security/` only.
 6. Keep custom data/report logic in custom addon to reduce upgrade risk.
@@ -140,8 +140,8 @@ Implication:
 > Since vendor file-level targets are not yet present locally, the file names below are expressed as **likely target areas** to validate once vendor module files are added.
 
 1. **Evidence Type on `project.task`**
-   - Extend model: `custom_addons/qsteps_project_custom/models/project_task.py`.
-   - Extend task form/tree views: `custom_addons/qsteps_project_custom/views/project_task_views.xml`.
+   - Extend model: `custom_addons/qsteps_accreditation_project/models/project_task.py`.
+   - Extend task form/tree views: `custom_addons/qsteps_accreditation_project/views/project_task_views.xml`.
 
 2. **Evidence Attachment on `project.task`**
    - Model field(s) on task (possibly relation to `ir.attachment` or binary helper fields).
@@ -177,7 +177,7 @@ Implication:
 ## 12. Developer Notes
 
 - **Safe to edit now**:
-  - anything under `custom_addons/qsteps_project_custom/`
+  - anything under `custom_addons/qsteps_accreditation_project/`
   - documentation under `docs/`
 - **Reference-only**:
   - `vendor/odoo18/addons/project/` (and once populated, still treat as read-only).
@@ -196,7 +196,7 @@ flowchart TD
     VendorRef["vendor/odoo18/addons/project\n(reference copy)"] -->|provides base model| ProjectTask["project.task"]
     VendorRef -->|provides base model| ProjectProject["project.project"]
 
-    CustomAddon["custom_addons/qsteps_project_custom"] --> Manifest["__manifest__.py\ndepends: project"]
+    CustomAddon["custom_addons/qsteps_accreditation_project"] --> Manifest["__manifest__.py\ndepends: project"]
     CustomAddon --> TaskPy["models/project_task.py\n_inherit project.task"]
     CustomAddon --> TaskViewXml["views/project_task_views.xml\n(inheritance placeholder)"]
     CustomAddon --> SecCsv["security/ir.model.access.csv\n(header only)"]

@@ -1,4 +1,4 @@
-# AGENTS.md (qsteps_project_custom)
+# AGENTS.md (qsteps_accreditation_project)
 
 This is the active customization addon.
 

@@ -24,15 +24,15 @@
 - Reminder logic and evaluator role design
 
 ## Files changed
-- `custom_addons/qsteps_project_custom/__manifest__.py`
-- `custom_addons/qsteps_project_custom/models/__init__.py`
-- `custom_addons/qsteps_project_custom/models/project_task.py`
-- `custom_addons/qsteps_project_custom/models/project_project.py`
-- `custom_addons/qsteps_project_custom/models/project_bucket.py`
-- `custom_addons/qsteps_project_custom/security/ir.model.access.csv`
-- `custom_addons/qsteps_project_custom/views/project_task_views.xml`
-- `custom_addons/qsteps_project_custom/views/project_project_views.xml`
-- `custom_addons/qsteps_project_custom/views/project_bucket_views.xml`
+- `custom_addons/qsteps_accreditation_project/__manifest__.py`
+- `custom_addons/qsteps_accreditation_project/models/__init__.py`
+- `custom_addons/qsteps_accreditation_project/models/project_task.py`
+- `custom_addons/qsteps_accreditation_project/models/project_project.py`
+- `custom_addons/qsteps_accreditation_project/models/project_bucket.py`
+- `custom_addons/qsteps_accreditation_project/security/ir.model.access.csv`
+- `custom_addons/qsteps_accreditation_project/views/project_task_views.xml`
+- `custom_addons/qsteps_accreditation_project/views/project_project_views.xml`
+- `custom_addons/qsteps_accreditation_project/views/project_bucket_views.xml`
 
 ## Data model shape
 - Customer (`res.partner`)

@@ -6,7 +6,7 @@
 3. Capture the upstream model/view external IDs before editing custom XML.
 
 ## 2) Decide where to implement changes
-1. Route all functional changes to `custom_addons/qsteps_project_custom`.
+1. Route all functional changes to `custom_addons/qsteps_accreditation_project`.
 2. Pick target files by change type:
    - Model field/logic: `models/`
    - Backend/portal view changes: `views/`

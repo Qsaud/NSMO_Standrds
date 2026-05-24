@@ -6,7 +6,7 @@ This repository is for **Odoo 18 Community** `project` module customization to s
 ## Repository Structure
 - `vendor/odoo18/addons/project`  
   Reference-only copy of the upstream Odoo 18 Community `project` module. Use it to understand original behavior.
-- `custom_addons/qsteps_project_custom`  
+- `custom_addons/qsteps_accreditation_project`  
   Active customization addon where all project-specific changes must be implemented.
 - `docs`  
   Team and Codex guidance, workflows, and review checklists.
@@ -16,7 +16,7 @@ This repository is for **Odoo 18 Community** `project` module customization to s
 ## Very Important Rules
 - Never edit files inside `vendor/odoo18/addons/project` unless explicitly requested.
 - Treat `vendor/odoo18/addons/project` as read-only upstream reference.
-- All custom Odoo changes must be implemented in `custom_addons/qsteps_project_custom`.
+- All custom Odoo changes must be implemented in `custom_addons/qsteps_accreditation_project`.
 - Use Odoo inheritance instead of copying or replacing original Odoo files.
 - Do not use Odoo Enterprise code.
 - Do not remove license files.
@@ -34,7 +34,7 @@ This repository is for **Odoo 18 Community** `project` module customization to s
 - Keep fields and views upgrade-friendly.
 
 ## Custom Addon Rules
-- Main customization module path: `custom_addons/qsteps_project_custom`
+- Main customization module path: `custom_addons/qsteps_accreditation_project`
 - The module must depend on `project`.
 - Add new fields in `models/`.
 - Add inherited backend views in `views/`.

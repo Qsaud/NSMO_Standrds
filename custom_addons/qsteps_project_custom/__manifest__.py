@@ -1,5 +1,5 @@
 {
-    "name": "QSteps Project Customization",
+    "name": "NSMO Standards Project Customization",
     "version": "18.0.1.0.0",
     "category": "Project",
     "summary": "Customizations for Odoo 18 Project module",

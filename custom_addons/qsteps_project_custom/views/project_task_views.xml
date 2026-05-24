@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record id="view_task_form_accreditation_inherit" model="ir.ui.view">
+            <field name="name">project.task.form.accreditation.inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Accreditation">
+                        <group>
+                            <group>
+                                <field name="evidence_type"/>
+                                <field name="challenge_type"/>
+                                <field name="accreditation_status"/>
+                                <field name="evidence_evaluation_status"/>
+                            </group>
+                            <group>
+                                <field name="evidence_attachment_ids" widget="many2many_binary"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_task_tree2_accreditation_inherit" model="ir.ui.view">
+            <field name="name">project.task.tree.accreditation.inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='stage_id']" position="after">
+                    <field name="evidence_type" optional="show"/>
+                    <field name="challenge_type" optional="hide"/>
+                    <field name="accreditation_status" optional="show"/>
+                    <field name="evidence_evaluation_status" optional="hide"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>

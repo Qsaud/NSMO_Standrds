@@ -6,9 +6,11 @@
     "depends": ["project"],
     "data": [
         "security/ir.model.access.csv",
-        "views/project_task_views.xml"
+        "views/project_task_views.xml",
+        "views/project_project_views.xml",
+        "views/project_bucket_views.xml",
     ],
     "installable": True,
     "application": False,
-    "license": "LGPL-3"
+    "license": "LGPL-3",
 }

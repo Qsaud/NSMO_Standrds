@@ -33,5 +33,18 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="view_project_project_search_inherit_subprojects" model="ir.ui.view">
+            <field name="name">project.project.search.inherit.subprojects</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_project_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <separator/>
+                    <filter name="root_projects" string="Root Projects" domain="[('parent_id', '=', False)]"/>
+                    <filter name="subprojects" string="Subprojects" domain="[('parent_id', '!=', False)]"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
